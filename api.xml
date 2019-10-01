@@ -1,0 +1,23 @@
+<%@"kabaara brian mwenda p15/101006/2017"%>
+<%@ WebService Language="VBScript" Class="MassConvert" %>
+
+Imports System
+Imports System.Web.Services
+
+Public Class MassConvert :Inherits WebService
+
+<WebMethod()> Public Function KilogramsToTonnes(ByVal Kilogram As String) As String
+  dim kg
+  kg=trim(replace(Kilogram,",","."))
+  if kg="" or IsNumeric(fahr)=false then return "Error"
+  return ((kg) / 1000)
+end function
+
+<WebMethod()> Public Function TonnesToKilograms(ByVal Tonnes As String) As String
+  dim ton
+  ton=trim(replace(Tonnes,",","."))
+  if ton="" or IsNumeric(ton)=false then return "Error"
+  return ((cel) * 1000)
+end function
+
+end class
