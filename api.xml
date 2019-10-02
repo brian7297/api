@@ -9,7 +9,7 @@ Public Class MassConvert :Inherits WebService
 <WebMethod()> Public Function KilogramsToTonnes(ByVal Kilogram As String) As String
   dim kg
   kg=trim(replace(Kilogram,",","."))
-  if kg="" or IsNumeric(fahr)=false then return "Error"
+  if kg="" or IsNumeric(kg)=false then return "Error"
   return ((kg) / 1000)
 end function
 
@@ -17,7 +17,7 @@ end function
   dim ton
   ton=trim(replace(Tonnes,",","."))
   if ton="" or IsNumeric(ton)=false then return "Error"
-  return ((cel) * 1000)
+  return ((ton) * 1000)
 end function
 
 end class
